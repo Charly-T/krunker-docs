@@ -1,0 +1,1 @@
+{"name":"New Krunker Map","ambient":"#97a0a8","light":"#f2f8fc","sky":"#dce8ed","fog":"#8d9aa0","fogD":2000,"xyz":[250,0.01,250,9.32,10.23,8.87],"objects":[{"p":[0,0,0],"si":0},{"p":[75,0,0],"i":55,"h":100,"tm":0,"ct":1,"te":20,"tas":[{"ta":29,"tct":"AI is damaged"}],"ms":4,"si":1}],"spawns":[[0,0,0,0,0,0]]}

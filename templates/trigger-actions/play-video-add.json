@@ -1,0 +1,1 @@
+{"name":"New Krunker Map","ambient":"#97a0a8","light":"#f2f8fc","sky":"#dce8ed","fog":"#8d9aa0","fogD":2000,"xyz":[250,0.01,250,10,10,10],"objects":[{"p":[0,0,0],"si":0},{"p":[20,1,0],"i":29,"tm":0,"te":16,"tce":200,"tas":[{"ta":67,"tct":"Custom value is greater than 200","cd":0}],"in":1,"si":1}],"spawns":[[0,0,0,0,0,0]]}
