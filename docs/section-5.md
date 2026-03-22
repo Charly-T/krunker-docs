@@ -1,5 +1,5 @@
 # 5.0.0 Triggers
-To address confusion over what works in test mode (which is considered more convenient) and what requires hosting, or even publishing, the team has added tags that reveal what will work in what circumstances. Do note, however, that an event working in test mode is not a guarantee that every *action* you pair with it works in test mode. 
+To address confusion over what works in test mode (which is considered more convenient) and what requires hosting, or even publishing, the team has added tags that reveal what may work in what circumstances. Do note, however, that an event working in test mode is not a guarantee that every *action* you pair it with works in test mode.
 
 ## 5.1.0 Trigger Events
 
@@ -14,24 +14,22 @@ Fires when a player melees the trigger object. Includes fists/hands and knives (
 `test-compatible`
 
 ### 5.1.3 onDamage
-Runs when the trigger is damaged. Requires health of trigger to be greater than 0. Fires when the trigger object takes damage in any way.
+Fires when the trigger is damaged in any way. Requires health of trigger to be greater than 0.
 
 `test-compatible`
 
-NOTE: Event Value has no effect.
-
 ### 5.1.4 onEnterObject
-Runs when the trigger is entered. This trigger event will disable player and bullet collisions in-game automatically, without affecting properties explicitly in editor. Fires when a player enters the trigger object.
+Fires when a player enters the trigger. This trigger event will disable player and bullet collisions in-game automatically, ignoring properties explicitly in editor.
 
 `test-compatible`
 
 ### 5.1.5 onDestroy
-When the trigger is destroyed. Destructible need not be on if the method of destruction is through expending the health. Fires when the trigger object is destroyed.
+Fires when the trigger is destroyed. Destructible doesn't needs to be on if the method of destruction is through expending the health.
 
 `test-compatible`
 
 ### 5.1.6 onRespawn
-When the trigger is respawned. This can be through built-in timer-related respawn, or respawning via another trigger. Fires when the trigger object respawns.
+Fires when the trigger is respawned. This can be through built-in timer-related respawn, or respawning via another trigger.
 
 `test-compatible`
 
@@ -43,133 +41,136 @@ In seconds (while not destroyed) a repeating timer for actions. One can make use
 NOTE: NO TARGET PLAYER (player-based actions are unusable). Partial sandbox compatibility depends on action.
 
 ### 5.1.8 onProjectile
-When the trigger is hit by a projectile. "Projectiles" include: thrown melee weapons, zapper prongs, and crossbow bolts. Fires on the configured projectile event.
+Fires when the trigger is hit by a projectile. "Projectiles" include: thrown melee weapons, zapper prongs, and crossbow bolts.
 
 `test-compatible`
 
 ### 5.1.9 onThrowingMelee
-When the trigger is hit by a thrown melee weapon. Fires when a melee weapon is thrown.
+Fires when the trigger is hit by a thrown melee weapon.
 
 `test-compatible`
 
 ### 5.1.10 onPunch
-When the trigger is punched. If the player is armed with a knife, melee attacks will have no effect. Fires when a player punches the trigger object.
+Fires when the trigger is punched. If the player is armed with a knife, melee attacks will have no effect.
 
 `test-compatible`
 
 NOTE: Event Value has no effect.
 
 ### 5.1.11 onHoldMouse
-When the player holds down the mouse. May lag a bit. This trigger event will disable player and bullet collisions in-game automatically, without affecting properties explicitly in editor. Fires when a player holds the mouse button on the trigger object.
+Fires repeatly when the player holds down the mouse. May lag a bit. This trigger event will disable player and bullet collisions in-game automatically, without affecting properties explicitly in editor.
+Enables "Custom Message" in "Technical & logic"
 
 `test-compatible`
 
 NOTE: Event Value controls in seconds, how long one must hold the mouse down for.
 
 ### 5.1.12 onCollision
-When a player touches the trigger. Fires on collision with the trigger object.
+Fires when a player touches the trigger.
 
 `test-compatible`
 
 ### 5.1.13 onStorageEquals
 Fires when interface storage equals a specific value.
 
-NOTE: Can't make it work on sandbox.
+`test-compatible`
 
 ### 5.1.14 onStorageGreater
 Fires when interface storage is greater than a specific value.
 
-NOTE: Can't make it work on sandbox.
+`test-compatible`
 
 ### 5.1.15 onStorageLesser
 Fires when interface storage is less than a specific value.
 
-NOTE: Can't make it work on sandbox.
+`test-compatible`
 
 ### 5.1.16 onInteractKey
-When the player is in range of the trigger, a popup will prompt them to press their interact key. This interact key can be set by the player, but it is G by default. Fires when a player presses the interact key.
+When the player is in range of the trigger, a popup will prompt them to press their interact key. This interact key can be set by the player, but it is G by default. Fires when a player presses that interact key.
+Enables "Custom Message" in "Technical & logic"
 
 `test-compatible`
 
 ### 5.1.17 onPlayerSpawn
-When a player is spawned. Fires when a player spawns in the game.
+Fires when a player is spawned both at start playing and after dying.
 
 `host-only`
 
 ### 5.1.18 onPlayerKill
-When a player is killed. Fires when a player gets a kill.
+Fires when a player is killed. Fires when a player gets a kill.
+TODO: when killed? or when kills?
 
 `host-only`
 
 ### 5.1.19 onPlayerDie
-When a player dies; this considers other sources of death, like self-kills via explosive damage, or death by triggers, death zones, or by falling below the death height. Fires when a player dies.
+Fires when a player dies; this considers other sources of death, like self-kills via explosive damage, or death by triggers, death zones, or by falling below the death height.
 
 `host-only`
 
 ### 5.1.20 onNukeStart
-When a nuke (the streak reward) begins. Fires when a nuke starts.
+Fires when a nuke (the streak reward) begins.
 
 `host-only`
 
 ### 5.1.21 onNukeEnd
-When a nuke ends. Fires when a nuke ends.
+Fires when a nuke ends.
 
 `host-only`
 
 ### 5.1.22 onExitObject
-When a player leaves the trigger. Fires when a player exits the trigger object.
+Fires when a player leaves the trigger. This trigger event will disable player and bullet collisions in-game automatically, ignoring properties explicitly in editor.
 
 `test-compatible`
 
 ### 5.1.23 onCustomValEquals
-Fires when a custom value equals a specific value.
+Fires when any custom value equals a specific value.
 
-NOTE: Can't make it work on sandbox.
+`test-compatible`
 
 ### 5.1.24 onCustomValLesser
-Fires when a custom value is less than a specific value.
+Fires when any custom value is less than a specific value.
 
-NOTE: Can't make it work on sandbox.
+`test-compatible`
 
 ### 5.1.25 onGameStart
-When a match starts. Fires when the game starts.
+Fires when a match starts.
 
 `host-only`
 
 ### 5.1.26 onObjectiveSwitch
-When the objective changes in Hardpoint (POINT), Deposit (DEPO), Deposit FFA (DEPOFFA), or King of the Hill (KING). Fires when the objective switches (e.g. Hardpoint).
+Fires when the objective changes in Hardpoint (POINT), Deposit (DEPO), Deposit FFA (DEPOFFA), or King of the Hill (KING).
 
 `test-compatible`
 
 ### 5.1.27 onPlayerDamage
-When a player is damaged. Fires when a player takes damage.
+Fires when a player is damaged.
 
 `test-compatible`
 
 ### 5.1.28 onCustomValGreater
-Fires when a custom value is greater than a specific value.
+Fires when any custom value is greater than a specific value.
 
-NOTE: Can't make it work on sandbox.
+`test-compatible`
 
 ### 5.1.29 onAIDeath
-Fires when an AI dies.
+Fires when an AI dies. AI can't die on test play, so only triggers while hosting.
 
-NOTE: Can't make it work on sandbox.
+`host-only`
 
 ### 5.1.30 onAIDamage
 Fires when an AI takes damage.
 
-NOTE: Can't make it work on sandbox.
+`test-compatible`
 
 ### 5.1.31 onAIHalfHealth
 Fires when an AI reaches half health.
 
-NOTE: Can't make it work on sandbox.
+`test-compatible`
 
 ### 5.1.32 onAIKillPlayer
 Fires when an AI kills a player.
 
-NOTE: Can't make it work on sandbox.
+`test-compatible`
 
 
 ## 5.2.0 Trigger Actions
@@ -195,7 +196,7 @@ Modifies player health. This is the only way to change player health incremental
 `test-compatible`
 
 ### 5.2.5 Destroy Interface
-Destroys an object where Destructible is enabled. Destroys the target interface.
+Destroys the target interface where Destructible is enabled.
 
 `test-compatible`
 
@@ -230,7 +231,7 @@ Respawns all players on the opposing team.
 `host-only`
 
 ### 5.2.12 Respawn Destructible Interface
-Respawns a destroyed object where Destructible is enabled. Respawns the target destructible interface.
+Respawns the target destroyed interface where Destructible is enabled.
 
 `test-compatible`
 
@@ -275,7 +276,7 @@ Sets the player to a specific team.
 `test-compatible`
 
 ### 5.2.21 Round Time
-Increments round time by the Action Value. The units are milliseconds and not seconds, therefore with the default range, users can only set it to change by 10 seconds each time. This can be expanded further by using JSON modification (10.0.0) or by using KS to modify round time (9.0.0) instead. Adjusts the round timer by a specified amount.
+Adjusts round time by the Action Value. The units are milliseconds and not seconds, therefore with the default range, users can only set it to change by 10 seconds each time. This can be expanded further by using JSON modification (10.0.0) or by using KS to modify round time (9.0.0) instead.
 
 `test-compatible`
 
@@ -285,7 +286,7 @@ Completely resets the target interface to its original state.
 `test-compatible`
 
 ### 5.2.23 End Round
-Ends game round. Ends the current round.
+Ends the current game round.
 
 `test-compatible`
 
@@ -295,7 +296,7 @@ Refills the player's throwable knife.
 `test-compatible`
 
 ### 5.2.25 Destroy Self
-Destroys the trigger object itself.
+Destroys the trigger object itself if the trigger is Destructible.
 
 `test-compatible`
 
@@ -360,12 +361,12 @@ Spawns AI bots at their configured positions.
 `test-compatible`
 
 ### 5.2.38 Set Player Value
-Sets a player value. Sets a custom player value to a specific number.
+Sets the triggering player value to a specific number.
 
 `test-compatible`
 
 ### 5.2.39 Inc/Dec Player Value
-Increases or decreases a custom player value by a specified amount.
+Increases or decreases the triggering player value by a specified amount.
 
 `test-compatible`
 
@@ -492,7 +493,7 @@ Gives the player a random status effect.
 ### 5.2.64 Play Video Ad
 Plays a full-screen video ad for the player.
 
-NOTE: Can't make it work on sandbox.
+`host-only`
 
 ### 5.2.65 Force AI Target
 Forces all AI to target the trigger object's position.
@@ -503,3 +504,71 @@ Forces all AI to target the trigger object's position.
 Executes a game mode-specific trigger action.
 
 NOTE: Can't make it work on sandbox.
+
+
+## 5.3.0 Trigger Conditions
+
+### 5.3.1 None
+No condition required for the action to execute.
+
+`test-compatible`
+
+### 5.3.2 Player Value
+Requires a specific player value (you can set the player value using triggers) for the action to be executed.
+
+`test-compatible`
+
+### 5.3.3 Current Class
+Requires the player to be using a specific class.
+
+`test-compatible`
+
+### 5.3.4 Trigger Value
+Requires the trigger value (you can set the trigger value using triggers) to be a certain amount for the trigger to be executed.
+
+`test-compatible`
+
+### 5.3.5 Player Count
+Requires a specific player count to be met.
+
+`test-compatible`
+
+### 5.3.6 Global Value
+Requires a specific global value (you can set the global value using triggers) to be met.
+
+`test-compatible`
+
+### 5.3.7 Player has Account
+Requires the player to have a registered Krunker account.
+
+`host-only`
+
+### 5.3.8 Player has Premium
+Requires the player to be subscribed to Krunker Premium.
+
+`host-only`
+
+### 5.3.9 Player is Verified
+Requires the player to have verification status.
+
+`host-only`
+
+### 5.3.10 Player is Partner
+Requires the player to have partner status.
+
+`host-only`
+
+### 5.3.11 Player Level
+Requires the player to be at a specific level.
+
+`test-compatible`
+
+### 5.3.12 Player Inventory Value
+Requires the player's inventory value to meet a condition.
+
+`test-compatible`
+
+### 5.3.13 Custom Action
+Calls a custom KrunkScript function to check the condition.
+
+`host-only`
