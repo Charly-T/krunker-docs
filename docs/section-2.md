@@ -4,7 +4,7 @@
 
 ### 2.1.1 Cube
 
-![](../assets/cube.png)
+![](../assets/objects/cube.png)
 
 #### Visible
 Determines if the object is rendered.
@@ -141,7 +141,7 @@ Sand
 Snow
 
 Options (visual menu):
-None
+
 Stone
 Stone (Classic)
 Stone (Light)
@@ -393,7 +393,7 @@ Front (-Z)
 ```
 ### 2.1.2 Ladder
 
-![](../assets/ladder.png)
+![](../assets/objects/ladder.png)
 #### Visible
 Determines if the object is rendered.
 
@@ -574,26 +574,26 @@ Enables shading.
 `Toggle switch`
 `Default: ON`
 ### 2.1.3 Plane
-![](../assets/plane.png)
+![](../assets/objects/plane.png)
 ### 2.1.4 Ramp
-![](../assets/ramp.png)
+![](../assets/objects/ramp.png)
 ### 2.1.5 Billboard
-![](../assets/billboard.png)
+![](../assets/objects/billboard.png)
 ### 2.1.6 Sphere
-![](../assets/sphere.png)
+![](../assets/objects/sphere.png)
 
 ### 2.1.7 Liquid
-![](../assets/liquid.png)
+![](../assets/objects/liquid.png)
 
 ### 2.1.8 Cylinder
-![](../assets/cylinder.png)
+![](../assets/objects/cylinder.png)
 One of the most versatile object types, visually. With cylinders, mapmakers can create archways, robes, conic roofs, 
 ### 2.1.9 Rune
-![](../assets/rune.png)
+![](../assets/objects/rune.png)
 ### 2.1.10 Sprite
-![](../assets/sprite.png)
+![](../assets/objects/sprite.png)
 ### 2.1.11 Rope Ladder
-![](../assets/rope-ladder.png)
+![](../assets/objects/rope-ladder.png)
 
 ## 2.2.0 Models
 
