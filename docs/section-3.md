@@ -369,7 +369,7 @@ Enables the sliding mechanic. If turned off, crouching will quickly decelerate t
 `Default: ON`
 
 ##### Air Strafe
-Enables strafing in the air. Strafing is a technique wherein a user presses two noncontradictory directional keys (WA, WD) and tilts the 
+Enables strafing in the air. Strafing is a technique wherein a user presses two non-contradictory directional keys (WA, WD) allowing them to change direction mid-air.
 
 `Toggle switch`
 `Default: OFF`
